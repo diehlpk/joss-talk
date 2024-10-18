@@ -1,0 +1,87 @@
+\documentclass{beamer}
+\usetheme{boxes}
+
+\setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\usepackage{emoji}
+
+\usepackage{svg}
+
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
+
+\title[JOSS and FLOSS]{JOSS and FLOSS for science: Examples for promoting open source software and science communication} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Patrick Diehl} 
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Motivation}
+
+\begin{center}
+    \textcolor{blue}{(Open source) software is essential for computational sciences}
+\end{center}
+
+\textbf{For example}, developing an R or Python package with some novel algorithms which are widely used by the research community is cool, but might not yet be considered for promotions, grant applications, or for awarding tenure. \emoji{astonished}\\
+\vspace{0.25cm}
+\textbf{Bummer}: NSF rejects a grant to fund the SciPy ecosystem, saying that working on it is not impactful enough. \emoji{sob}\\
+\vspace{0.25cm}
+\textcolor{red}{Contrary}, people get credit for papers (citations) using open source software. How can we change that, and people get credit for software? \emoji{thinking} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+\input{joss.tex}
+
+\input{floss.tex}
+
+\begin{frame}{Conclusion}
+
+\begin{block}{Benefits \emoji{smiley}}
+    \begin{itemize}
+        \item JOSS is one opportunity to get credit for software development
+        \item FLOSS was a good opportunity for science communication 
+    \end{itemize}
+\end{block}
+
+\begin{block}{Challenges \emoji{neutral-face}}
+    \begin{itemize}
+        \item Obtain funding for the promotion of open-source and science communication:
+        \begin{itemize}
+            \item  JOSS is funded by NumFocus, \emph{e.g.}\ server, DOI. However, all editors and reviewers are volunteers.
+            \item FLOSS was funded by the hosts with their private money. Recording, Editing, and Graphic Design were done by volunteers.
+        \end{itemize}
+    \end{itemize}
+\end{block}
+\begin{center}
+    More work is needed to get funding and credits for software development.
+\end{center}
+
+\tiny \doclicenseThis
+\end{frame}
+
+\end{document}
+
+
