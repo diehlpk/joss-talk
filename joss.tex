@@ -1,0 +1,259 @@
+%------------------------------------------------
+\section{The Journal of Open Source Software: Developing a Software Review Community} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}{Journal of Open Source Software}
+\framesubtitle{Developing a Software Review Community}
+\begin{center}
+\includegraphics{joss.png}    
+\end{center}
+
+{\tiny
+Gabriela Alessio Robles, Mikkel Meyer Andersen, Katy Barnhart, Juanjo Bazán, Sebastian Benthall, Eloisa Bentivegna,
+Monica Bobra, Frederick Boehm, Jed Brown, Pierre de Buyl, Patrick Diehl, Elizabeth DuPre, Vissarion Fisikopoulos,
+Martin Fleischmann, Dan Foreman-Mackey, Jarvis Moore Frost, Nikoleta Glynatsi, Jeff Gostick, Richard Gowers, Hugo Gruson,
+Olivia Guest, David Hagan, Jayaram Harihan, Chris Hartgerink, Bita Hasheminezhad, Christina Hedges, Luiz Irber,
+Mark A. Jensen, Prashant K. Jha, \textcolor{blue}{Daniel S. Katz}, Vincent Knight, Rachel Kurchin, Hugo Ledoux, Christopher R. Madan,
+Brian McFee, Melissa Weber Mendonça, Kevin M. Moerman, Kyle Niemeyer, Juan Nunez-Iglesias, Lorena Pantano,
+Stefan Pfenninger, Viviane Pons, Kristina Riemer, Amy Roberts, Marie E. Rognes, Ariel Rokem, Will Rowe, Kelly Rowland,
+David P. Sanders, Mehmet Hakan Satman, Fabian Scheipl, Jacob Schrieber, Adi Singh, \textcolor{blue}{Arfon Smith}, Charlotte Soneson,
+Øystein Sørensen, Andrew Stewart, Fabian-Robert Stöter, Yuan Tang, George K. Thiruvathukal, Kristen Thyng,
+Tim Tröndle, Leonardo Uieda, Chris Vernon, Marcos Vital, Lucy Whalley, Bruce E. Wilson, Frauke Wiese}
+
+\begin{center}
+     \url{https://joss.theoj.org}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{How to better recognize software
+contributions?}
+
+\begin{itemize}
+    \item Find some way to fit software into
+current (paper/book-centric)
+system
+    \item  Evolve beyond one-dimensional
+credit model
+\end{itemize}
+
+\begin{center}
+    \textcolor{blue}{What if we just wrote papers about software?}
+\end{center}
+
+\begin{itemize}
+    \item<only@1> Gives us something easy to cite \emoji{thumbs-up-light-skin-tone}
+    \item<only@1> No changes required to existing
+infrastructure \emoji{ok-hand-medium-dark-skin-tone}
+    \item<only@1> Publishing in existing journals raises
+profile of software within a community \emoji{love-you-gesture-medium-skin-tone}
+%
+    \item<2> Writing another paper can be a ton of
+work \emoji{grinning-face-with-sweat}
+    \item<2> Many journals don’t accept software
+papers \emoji{face-with-symbols-on-mouth}
+    \item<2> For long-lived software packages, static
+authorship presents major issues \emoji{worried-face}
+    \item<2> Many papers about the same software
+may lead to citation dilution \emoji{oncoming-fist-light-skin-tone}
+\end{itemize}
+
+    
+\end{frame}
+
+\begin{frame}
+
+\begin{center}
+What if we made it as easy as
+possible to write and publish a
+software paper?
+\end{center}
+
+\begin{center}
+   \textcolor{blue}{Embracing the hack}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+  \includegraphics[scale=0.5]{joss.png}      \includesvg{joss-text.svg}
+\vspace{1cm}
+\begin{itemize}
+    \item A \textbf{developer-friendly} journal* for research software
+packages
+    \item Paper preparation (and submission) for well-documented
+software should take \textbf{no more than an hour}
+\item The primary purpose of a JOSS paper is to \textbf{enable citation
+credit} to be given to authors of research software
+\end{itemize}
+
+\vspace{2cm}
+
+{tiny * Other (commercial) venues exist for publishing papers about software}
+\end{frame}
+
+    
+\begin{frame}{JOSS process {\tiny(\url{https://doi.org/10.6084/m9.figshare.5147773.v2})}}
+    \centering
+    \includegraphics[scale=0.5]{JOSS-flowchart-updated.pdf}
+\end{frame}
+
+\begin{frame}{JOSS - Review Checklist}
+
+\begin{itemize}
+    \item Agree to Conflict of Interest \& Code of Conduct
+    \item General checks: repository URL, license,
+contribution and authorship
+    \item Functionality: installation, functional claims,
+performance
+\item Documentation: statement of need, installation
+instructions, example usage, functionality
+documentation, automated tests, community
+guidelines
+\item Software paper: summary, statement of need,
+state of the field, quality of writing, references
+\end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{JOSS - Review Checklist Details}
+Definition of each check-in JOSS documentation:
+\url{https://joss.readthedocs.io/en/latest/
+review_criteria.html}\\
+\vspace{0.5cm}
+The editor helps the reviewer and author come to
+agreement and some criteria have guidance
+\vspace{0.5cm}
+\begin{itemize}
+    \item Installation
+    \item API documentation
+    \item Community guidelines
+    \item Automated testing
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{JOSS - Review Checklist Details}
+\framesubtitle{Installation}
+
+\begin{itemize}
+    \item \emoji{thumbs-up-medium-skin-tone}: The software is simple to install, and
+follows established distribution and dependency
+management approaches for the language
+being used
+\item \emoji{oncoming-fist-dark-skin-tone}: A list of dependencies to install, together
+with some kind of script to handle their
+installation (\emph{e.g.}, a Makefile)
+\item \emoji{thumbs-down-light-skin-tone} (not acceptable): Dependencies are unclear,
+and/or installation process lacks automation
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{JOSS - Review Checklist Details}
+\framesubtitle{API Documentation}
+
+\begin{itemize}
+        \item \emoji{thumbs-up-medium-skin-tone}: All functions/methods are documented
+including example inputs and outputs
+\item \emoji{oncoming-fist-dark-skin-tone}: Core API functionality is documented
+\item \emoji{thumbs-down-light-skin-tone} (not acceptable): API is undocumented
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{JOSS - Review Checklist Details}
+\framesubtitle{Automated Tests}
+
+\begin{itemize}
+        \item \emoji{thumbs-up-medium-skin-tone}: An automated test suite hooked up to
+continuous integration (GitHub Actions, Circle CI,
+or similar)
+\item \emoji{oncoming-fist-dark-skin-tone}: Documented manual steps that can be
+followed to objectively check the expected
+functionality of the software (\emph{e.g.}, a sample input
+file to assert behavior)
+\item \emoji{thumbs-down-light-skin-tone} (not acceptable):  No way for you, the
+reviewer, to objectively assess whether the
+software works
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{JOSS as a Community}
+    \begin{itemize}
+        \item Cultures change based on rules and incentives
+        \item JOSS practices have influenced reviewers and
+developers in terms of what's good and what's
+minimally acceptable
+\item Similar to rOpenSci's influence in the R community
+\item JOSS provides rules, and at a high-level, tries to
+nudge incentives
+\item Accepted software = accepted paper
+\item If software was cited directly, JOSS papers wouldn't
+be needed, but JOSS reviews and JOSS
+community would still have great value
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}\frametitle{Bot-based process using GitHub: @editorialbot}
+
+    \begin{columns}
+    \column{0.5\textwidth}
+    \begin{itemize}
+        \item Interacts with authors, reviewers, and editors
+in review ‘issues’ on GitHub
+\item Compiles papers (Pandoc)
+\item Conducts automated ‘healthchecks’ for
+incoming submissions (\emph{e.g.}\ license checks,
+search for missing DOIs)
+\item Sends automated reminders
+\item Deposits metadata and
+ and 
+registers DOIs with Crossref
+    \end{itemize}
+        
+    \column{0.6\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{joss-github.png}
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}{Some data on most cited papers}
+
+\includegraphics[width=\linewidth]{most-cited.png}
+
+
+
+{\tiny More data: \url{http://www.theoj.org/joss-analytics/joss-submission-analytics.html}}    
+\end{frame}
+
+\begin{frame}{Some data on published papers}
+
+\includegraphics[width=\linewidth]{papers-per-year.png}
+
+
+
+{\tiny More data: \url{http://www.theoj.org/joss-analytics/joss-submission-analytics.html}}    
+\end{frame}
+
+
+\begin{frame}{Conclusion}
+
+\begin{center}
+\Large \textcolor{blue}{JOSS is a collaboration
+between author, editor and
+reviewer}
+\end{center}
+\vspace{1cm}
+Please submit your software package and get credit for your work!
+\vspace{1cm}
+{\tiny Slides based on: \url{https://doi.org/10.5281/zenodo.6305241}\\
+Guest Post — The Evolving Role of Scientific Editing: \url{https://scholarlykitchen.sspnet.org/2021/09/23/guest-post-the-evolving-role-of-scientific-editing/}}
+    
+\end{frame}
