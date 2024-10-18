@@ -1,0 +1,20 @@
+name: Build with lualatex
+on: [push, pull_request]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile talk.tex
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: talk.tex
+          compiler: lualatex
+          args: --shell-escape
+          extra_system_packages: fonts-noto-color-emoji inkscape
+      - name: Upload JOSS PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF
+          path: talk.pdf
