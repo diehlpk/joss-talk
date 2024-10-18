@@ -1,5 +1,6 @@
-# joss-talk
-JOSS talk
+# JOSS talk ![Build Status](https://github.com/diehlpk/joss-talk/workflows/Build%20with%20lualatex/badge.svg)
+
+
 
 
 ## Talks
