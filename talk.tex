@@ -3,6 +3,9 @@
 
 \setbeamertemplate{navigation symbols}{}
 
+\usepackage{fontspec}
+\setmainfont{Raleway}
+
 \AtBeginSection[]{
   \begin{frame}
   \vfill
@@ -16,6 +19,10 @@
 
 \usepackage{emoji}
 
+\usepackage{xcolor}
+\definecolor{azure}{rgb}{0.0, 0.5, 1.0}
+\definecolor{awesome}{rgb}{1.0, 0.13, 0.32}
+
 \usepackage{svg}
 
 \usepackage[
@@ -24,9 +31,15 @@
     version={3.0},
 ]{doclicense}
 
-\title[JOSS and FLOSS]{JOSS and FLOSS for science: Examples for promoting open source software and science communication} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[JOSS]{The Journal of Open Source Software: Developing a Software Review Community} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Patrick Diehl} 
+\institute[LSU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Applied Computer Science \\ Los Alamos National Laboratory \\ Department of Physics and Astronomy \\ Louisiana State University \\ % Your institution for the title page
+\medskip
+\textit{diehlpk@lanl.gov} % Your email address
+}
 
 
 \begin{document}
@@ -38,14 +51,14 @@
 \begin{frame}{Motivation}
 
 \begin{center}
-    \textcolor{blue}{(Open source) software is essential for computational sciences}
+    \textcolor{azure}{(Open source) software is essential for computational sciences}
 \end{center}
 
-\textbf{For example}, developing an R or Python package with some novel algorithms which are widely used by the research community is cool, but might not yet be considered for promotions, grant applications, or for awarding tenure. \emoji{astonished}\\
+\textbf{For example}, developing an R, C\texttt{++}, or Python package with some novel algorithms which are widely used by the research community is cool, but might not yet be considered for promotions, grant applications, or for awarding tenure. \emoji{astonished}\\
 \vspace{0.25cm}
-\textbf{Bummer}: NSF rejects a grant to fund the SciPy ecosystem, saying that working on it is not impactful enough. \emoji{sob}\\
+\textbf{Funding}: NSF's Pathways to Enable Open-Source Ecosystems (POSE)\footnote{\tiny\url{https://new.nsf.gov/funding/opportunities/pose-pathways-enable-open-source-ecosystems}}. \emoji{clap}\\
 \vspace{0.25cm}
-\textcolor{red}{Contrary}, people get credit for papers (citations) using open source software. How can we change that, and people get credit for software? \emoji{thinking} 
+\textcolor{awesome}{Contrary}, people get credit for papers (citations) using open source software. How can we change that, and people get credit for software? \emoji{thinking} 
 \end{frame}
 
 \begin{frame}
@@ -55,28 +68,26 @@
 
 \input{joss.tex}
 
-\input{floss.tex}
+%\input{floss.tex}
 
 \begin{frame}{Conclusion}
 
 \begin{block}{Benefits \emoji{smiley}}
     \begin{itemize}
         \item JOSS is one opportunity to get credit for software development
-        \item FLOSS was a good opportunity for science communication 
+        \item JOSS is a collaboration between author, editor and reviewers
     \end{itemize}
 \end{block}
 
 \begin{block}{Challenges \emoji{neutral-face}}
-    \begin{itemize}
-        \item Obtain funding for the promotion of open-source and science communication:
         \begin{itemize}
             \item  JOSS is funded by NumFocus, \emph{e.g.}\ server, DOI. However, all editors and reviewers are volunteers.
-            \item FLOSS was funded by the hosts with their private money. Recording, Editing, and Graphic Design were done by volunteers.
+            \item Scalability! Last year 400 published papers means at least 800 reviewers. Do not burn our volunteers.
         \end{itemize}
-    \end{itemize}
 \end{block}
 \begin{center}
-    More work is needed to get funding and credits for software development.
+    Please submit your software package and get credit for your work! \\
+    Please sign up as reviewer to help JOSS to handle around 400 papers per year.
 \end{center}
 
 \tiny \doclicenseThis
